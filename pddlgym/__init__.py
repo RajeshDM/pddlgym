@@ -46,6 +46,8 @@ for env_name, kwargs in [
                            'dynamic_action_space' : True}),
         ("spanner_ipcc", {'operators_as_actions' : True,
                            'dynamic_action_space' : True}),
+        ("rovers_ipcc", {'operators_as_actions' : True,
+                           'dynamic_action_space' : True}),
         ("easygripper", {'operators_as_actions' : True,
                          'dynamic_action_space' : False}),
         ("onearmedgripper", {'operators_as_actions' : True,
