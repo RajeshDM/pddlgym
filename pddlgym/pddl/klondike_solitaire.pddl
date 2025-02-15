@@ -45,6 +45,7 @@
        (not (is_free_pile ?y))
        (not (on_pile ?x ?z))
        (is_free_pile ?z)
+       (not (in_foundation_pile ?x))
        (in_tab_pile ?x)
        (on_pile ?x ?y)
        ))
@@ -58,6 +59,7 @@
        (not (is_free_pile ?y))
        (not (on_card ?x ?z))
        (is_free_card ?z)
+       (not (in_foundation_pile ?x))
        (in_tab_pile ?x)
        (on_pile ?x ?y)
        (is_moveable ?z)
@@ -72,19 +74,21 @@
        (not (on_pile ?x ?z))
        (is_free_pile ?z)
        (in_tab_pile ?x)
+       (not (in_foundation_pile ?x))
        (on_card ?x ?y)
        ))
 
 (:action on_card_move_card_to_tab_card
 	     :parameters (?z - card ?x - card ?y - card)
-	     :precondition (and (on_card ?x ?z) (is_moveable ?x) (can_move_on_tab_card ?x ?y) (is_free_pile ?y) (is_tab_pile ?y))
+	     :precondition (and (on_card ?x ?z) (is_moveable ?x) (can_move_on_tab_card ?x ?y) (is_free_card ?y) (in_tab_pile ?y))
 	     :effect
 	     (and 
        (not (is_free_pile ?y))
        (not (on_card ?x ?z))
-       (is_free_pile ?z)
        (in_tab_pile ?x)
-       (on_pile ?x ?y)
+       (not (in_foundation_pile ?x))
+       (is_free_card ?z)
+       (on_card ?x ?y)
        (is_moveable ?z)
        ))
 
@@ -97,6 +101,7 @@
        (not (on_pile ?x ?z)) 
        (is_free_pile ?z)
        (in_foundation_pile ?x)
+       (not (in_tab_pile ?x))
        (on_pile ?x ?y)
        ))
 
@@ -107,8 +112,10 @@
 	     (and 
        (not (is_free_pile ?y))
        (not (on_card ?x ?z)) 
-       (is_free_pile ?z)
+       (is_free_card ?z)
+       (is_moveable ?z)
        (in_foundation_pile ?x)
+       (not (in_tab_pile ?x))
        (on_pile ?x ?y)
        ))
 
@@ -117,10 +124,12 @@
 	     :precondition (and (on_pile ?x ?z) (is_moveable ?x) (can_move_on_foundation_card ?x ?y) (is_free_card ?x) (is_free_card ?y) (in_foundation_pile ?y))
 	     :effect
 	     (and 
-       (not (is_free_pile ?y))
+       (not (is_free_card ?y))
        (not (on_pile ?x ?z)) 
        (is_free_pile ?z)
+       (not (is_moveable ?y))
        (in_foundation_pile ?x)
+       (not (in_tab_pile ?x))
        (on_card ?x ?y)
        ))
 
@@ -129,13 +138,15 @@
 	     :precondition (and (on_card ?x ?z) (is_moveable ?x) (can_move_on_foundation_card ?x ?y) (is_free_card ?x) (is_free_card ?y) (in_foundation_pile ?y))
 	     :effect
 	     (and 
-       (not (is_free_pile ?y))
+       (not (is_free_card ?y))
        (not (on_card ?x ?z)) 
-       (is_free_pile ?z)
+       (is_free_card ?z)
+       (is_moveable ?z)
+       (not (is_moveable ?y))
        (in_foundation_pile ?x)
+       (not (in_tab_pile ?x))
        (on_card ?x ?y)
        ))
-
 
 (:action move_stock_card_to_foundation_card
 	     :parameters (?x - card ?y - card)
@@ -143,8 +154,11 @@
 	     :effect
 	     (and 
        (not (is_free_card ?y))
+       (not (is_moveable ?y))
        (in_foundation_pile ?x)
        (on_card ?x ?y)
+       (not (in_tab_pile ?x))
+       (not (in_stock_pile ?x))
        ))
 
 (:action move_stock_card_to_foundation_pile
@@ -155,6 +169,8 @@
        (not (is_free_pile ?y))
        (in_foundation_pile ?x)
        (on_pile ?x ?y)
+       (not (in_tab_pile ?x))
+       (not (in_stock_pile ?x))
        ))
 
 (:action move_stock_card_to_tableau_card
@@ -165,16 +181,20 @@
        (not (is_free_card ?y))
        (in_tab_pile ?x)
        (on_card ?x ?y)
+       (not (in_foundation_pile ?x))
+       (not (in_stock_pile ?x))
        ))
 
 (:action move_stock_card_to_tableau_pile
 	     :parameters (?x - card ?y - pile)
-	     :precondition (and (is_moveable ?x) (can_move_on_tab_pile ?x ?y) (is_free_card ?x) (is_free_pile ?y) (in_stock_pile ?x) (in_tab_pile ?y))
+	     :precondition (and (is_moveable ?x) (can_move_on_tab_pile ?x ?y) (is_free_card ?x) (is_free_pile ?y) (in_stock_pile ?x) (is_tab_pile ?y))
 	     :effect
 	     (and 
        (not (is_free_pile ?y))
        (in_tab_pile ?x)
        (on_pile ?x ?y)
+       (not (in_foundation_pile ?x))
+       (not (in_stock_pile ?x))
        ))
 
 
