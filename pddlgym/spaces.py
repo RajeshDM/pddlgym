@@ -33,13 +33,13 @@ class LiteralSpace(Space):
         self._type_to_parent_types = type_to_parent_types
         super().__init__()
 
-    def _update_objects_from_state(self, state):
+    def _update_objects_from_state(self, state, reground=False):
         """Given a state, extract the objects and if they have changed, 
         recompute all ground literals
         """
         # Check whether the objects have changed
         # If so, we need to recompute the ground literals
-        if state.objects == self._objects:
+        if state.objects == self._objects and not reground:
             return
 
         # Organize objects by type
@@ -112,14 +112,14 @@ class LiteralActionSpace(LiteralSpace):
             type_hierarchy=type_hierarchy,
             type_to_parent_types=type_to_parent_types)
 
-    def _update_objects_from_state(self, state):
+    def _update_objects_from_state(self, state, reground=False):
         # Check whether the objects have changed
         # If so, we need to recompute things
-        if state.objects == self._objects:
+        if state.objects == self._objects and not reground:
             return
 
         # Parent class update
-        super()._update_objects_from_state(state)
+        super()._update_objects_from_state(state, reground)
 
         # Recompute all ground operators
         # Associate each ground action literal with ground preconditions
@@ -148,8 +148,8 @@ class LiteralActionSpace(LiteralSpace):
     def sample(self, state):
         return self.sample_literal(state)
 
-    def all_ground_literals(self, state, valid_only=True):
-        self._update_objects_from_state(state)
+    def all_ground_literals(self, state, valid_only=True, reground=False):
+        self._update_objects_from_state(state, reground)
         assert valid_only, "The point of this class is to avoid the cross product!"
         valid_literals = set()
         for ground_action in self._all_ground_literals:

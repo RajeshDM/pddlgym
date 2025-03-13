@@ -1,0 +1,136 @@
+move_stock_card_to_foundation_pile: c0s1, foundation1
+move_stock_card_to_foundation_card: c1s1, c0s1
+move_stock_card_to_foundation_card: c2s1, c1s1
+on_card_move_card_to_foundation_card: c1s0, c3s1, c2s1
+move_stock_card_to_foundation_pile: c0s0, foundation0
+on_card_move_card_to_foundation_card: c8s0, c1s0, c0s0
+move_stock_card_to_foundation_pile: c0s2, foundation2
+move_stock_card_to_foundation_card: c1s2, c0s2
+move_stock_card_to_foundation_card: c2s2, c1s2
+move_stock_card_to_foundation_card: c3s2, c2s2
+on_pile_move_card_to_tab_card: tableau0, c8s3, c9s2
+on_card_move_card_to_tab_card: c10s0, c8s0, c9s3
+on_card_move_card_to_tab_card: c9s2, c8s3, c9s0
+on_card_move_card_to_tab_card: c7s3, c10s0, c11s1
+on_card_move_card_to_tab_card: c12s1, c7s3, c8s0
+on_card_move_card_to_tab_card: c9s0, c8s3, c9s2
+on_card_move_card_to_tab_card: c4s2, c9s3, c10s0
+on_card_move_card_to_foundation_card: c6s1, c4s2, c3s2
+on_card_move_card_to_tab_card: c9s2, c8s3, c9s0
+move_stock_card_to_tab_card: c6s2, c7s3
+on_card_move_card_to_tab_card: c9s0, c8s3, c9s2
+move_stock_card_to_tab_card: c3s3, c4s0
+on_card_move_card_to_tab_card: c9s2, c8s3, c9s0
+move_stock_card_to_tab_card: c5s0, c6s1
+on_card_move_card_to_tab_card: c9s0, c8s3, c9s2
+move_stock_card_to_tab_card: c5s3, c6s2
+on_card_move_card_to_tab_card: c9s2, c8s3, c9s0
+on_card_move_card_to_tab_card: c7s2, c4s0, c5s3
+on_card_move_card_to_tab_card: c12s0, c7s2, c8s3
+on_card_move_card_to_tab_card: c5s2, c6s1, c7s2
+on_card_move_card_to_foundation_card: c0s3, c5s2, c4s2
+on_card_move_card_to_foundation_pile: c7s0, c0s3, foundation3
+move_stock_card_to_foundation_card: c1s3, c0s3
+move_stock_card_to_foundation_card: c2s3, c1s3
+on_card_move_card_to_foundation_card: c4s0, c3s3, c2s3
+on_card_move_card_to_tab_card: c9s0, c8s3, c9s2
+on_card_move_card_to_tab_card: c7s2, c6s1, c7s0
+on_card_move_card_to_tab_card: c9s2, c8s3, c9s0
+on_card_move_card_to_tab_card: c12s2, c11s1, c12s0
+on_card_move_card_to_tab_pile: c3s0, c12s2, tableau0
+on_card_move_card_to_tab_card: c7s0, c6s1, c7s2
+on_card_move_card_to_tab_card: c9s0, c8s3, c9s2
+on_card_move_card_to_tab_card: c7s2, c6s1, c7s0
+on_card_move_card_to_tab_card: c12s0, c11s1, c12s2
+on_card_move_card_to_tab_card: c9s2, c8s3, c9s0
+on_card_move_card_to_tab_card: c7s0, c6s1, c7s2
+on_card_move_card_to_tab_card: c9s0, c8s3, c9s2
+move_stock_card_to_tab_card: c11s0, c12s1
+on_card_move_card_to_tab_card: c7s2, c6s1, c7s0
+on_card_move_card_to_tab_card: c9s2, c8s3, c9s0
+on_card_move_card_to_tab_card: c7s0, c6s1, c7s2
+on_card_move_card_to_tab_card: c12s2, c11s1, c12s0
+on_card_move_card_to_tab_card: c9s0, c8s3, c9s2
+on_card_move_card_to_tab_card: c7s2, c6s1, c7s0
+on_card_move_card_to_tab_card: c9s2, c8s3, c9s0
+move_stock_card_to_tab_card: c8s1, c9s2
+on_card_move_card_to_tab_card: c8s3, c7s2, c8s1
+on_card_move_card_to_tab_card: c7s0, c6s1, c7s2
+on_card_move_card_to_tab_card: c10s2, c7s0, c8s3
+on_card_move_card_to_tab_card: c7s2, c6s1, c7s0
+on_card_move_card_to_tab_card: c10s0, c9s3, c10s2
+on_card_move_card_to_tab_card: c12s0, c11s1, c12s2
+on_card_move_card_to_tab_card: c10s2, c9s3, c10s0
+on_card_move_card_to_tab_card: c7s0, c6s1, c7s2
+on_card_move_card_to_tab_card: c10s0, c9s3, c10s2
+on_card_move_card_to_tab_card: c12s2, c11s1, c12s0
+move_stock_card_to_tab_card: c6s3, c7s0
+on_card_move_card_to_tab_card: c6s1, c5s0, c6s3
+on_card_move_card_to_tab_card: c12s0, c11s1, c12s2
+on_card_move_card_to_tab_card: c6s3, c5s0, c6s1
+on_card_move_card_to_tab_card: c10s2, c9s3, c10s0
+on_card_move_card_to_tab_card: c6s1, c5s0, c6s3
+on_card_move_card_to_tab_card: c12s2, c11s1, c12s0
+on_card_move_card_to_tab_card: c6s3, c5s0, c6s1
+move_stock_card_to_tab_card: c10s1, c11s0
+on_card_move_card_to_tab_card: c6s1, c5s0, c6s3
+on_card_move_card_to_tab_card: c11s3, c9s0, c10s1
+on_pile_move_card_to_tab_card: tableau6, c10s2, c11s3
+on_card_move_card_to_tab_card: c6s3, c5s0, c6s1
+on_card_move_card_to_tab_card: c4s3, c11s3, c12s2
+on_card_move_card_to_foundation_card: c11s2, c4s3, c3s3
+on_card_move_card_to_tab_card: c6s1, c5s0, c6s3
+on_card_move_card_to_tab_card: c11s0, c10s1, c11s2
+on_card_move_card_to_tab_card: c10s0, c9s3, c10s2
+on_card_move_card_to_tab_card: c6s3, c5s0, c6s1
+on_card_move_card_to_tab_card: c11s2, c10s1, c11s0
+on_card_move_card_to_tab_card: c6s1, c5s0, c6s3
+move_stock_card_to_tab_pile: c12s3, tableau6
+on_card_move_card_to_tab_card: c5s1, c11s2, c12s3
+on_card_move_card_to_tab_card: c6s3, c5s0, c6s1
+on_card_move_card_to_tab_card: c5s3, c4s0, c5s1
+on_card_move_card_to_foundation_card: c6s2, c5s3, c4s3
+on_card_move_card_to_foundation_card: c7s0, c6s3, c5s3
+on_card_move_card_to_foundation_card: c7s3, c6s2, c5s2
+on_card_move_card_to_foundation_card: c8s0, c7s3, c6s3
+on_card_move_card_to_tab_card: c10s2, c9s3, c10s0
+on_card_move_card_to_tab_card: c7s2, c6s1, c7s0
+on_card_move_card_to_foundation_card: c8s1, c7s2, c6s2
+move_stock_card_to_foundation_card: c8s2, c7s2
+on_card_move_card_to_tab_card: c10s0, c9s3, c10s2
+on_card_move_card_to_tab_card: c11s0, c10s1, c11s2
+on_card_move_card_to_tab_card: c10s2, c9s3, c10s0
+on_card_move_card_to_tab_card: c8s3, c7s0, c8s1
+on_card_move_card_to_foundation_card: c9s0, c8s3, c7s3
+on_card_move_card_to_tab_card: c11s2, c10s1, c11s0
+on_card_move_card_to_tab_card: c10s0, c9s3, c10s2
+on_card_move_card_to_tab_card: c11s0, c10s1, c11s2
+on_card_move_card_to_tab_card: c9s2, c8s1, c9s0
+on_card_move_card_to_foundation_card: c2s0, c9s2, c8s2
+on_pile_move_card_to_foundation_card: tableau1, c2s0, c1s0
+on_card_move_card_to_foundation_card: c4s1, c3s0, c2s0
+on_pile_move_card_to_foundation_card: tableau3, c4s1, c3s1
+on_card_move_card_to_foundation_card: c5s1, c4s0, c3s0
+on_pile_move_card_to_foundation_card: tableau4, c5s1, c4s1
+on_card_move_card_to_foundation_card: c6s1, c5s0, c4s0
+on_card_move_card_to_foundation_card: c7s0, c6s1, c5s1
+move_stock_card_to_foundation_card: c6s0, c5s0
+on_card_move_card_to_foundation_card: c8s1, c7s0, c6s0
+on_card_move_card_to_foundation_card: c9s3, c8s0, c7s0
+on_card_move_card_to_foundation_card: c10s2, c9s3, c8s3
+on_card_move_card_to_foundation_card: c11s3, c10s2, c9s2
+move_stock_card_to_foundation_card: c10s3, c9s3
+on_card_move_card_to_foundation_card: c12s2, c11s3, c10s3
+move_stock_card_to_foundation_card: c7s1, c6s1
+on_card_move_card_to_foundation_card: c9s0, c8s1, c7s1
+on_card_move_card_to_foundation_card: c10s1, c9s0, c8s0
+on_card_move_card_to_foundation_card: c11s1, c10s0, c9s0
+on_card_move_card_to_foundation_card: c12s1, c11s0, c10s0
+move_stock_card_to_foundation_card: c9s1, c8s1
+on_card_move_card_to_foundation_card: c11s2, c10s1, c9s1
+on_card_move_card_to_foundation_card: c12s0, c11s1, c10s1
+on_pile_move_card_to_foundation_card: tableau2, c12s0, c11s0
+on_pile_move_card_to_foundation_card: tableau5, c12s1, c11s1
+on_card_move_card_to_foundation_card: c12s3, c11s2, c10s2
+on_pile_move_card_to_foundation_card: tableau0, c12s2, c11s2
+on_pile_move_card_to_foundation_card: tableau6, c12s3, c11s3
