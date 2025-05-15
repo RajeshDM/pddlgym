@@ -6,10 +6,6 @@
 
 **This library is under development by [Tom Silver](http://web.mit.edu/tslvr/www/) and [Rohan Chitnis](https://rohanchitnis.com/). Correspondence: <tslvr@mit.edu> and <ronuchit@mit.edu>.**
 
-## Paper
-
-Please see [our paper](https://arxiv.org/abs/2002.06432) describing the design decisions and implementation details behind PDDLGym.
-
 ## Status
 
 **We support the following subset of PDDL1.2:**
